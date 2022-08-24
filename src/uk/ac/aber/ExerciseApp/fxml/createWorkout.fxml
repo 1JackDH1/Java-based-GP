@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox fx:id="root" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aber.ExerciseApp.fxcontroller.CreateWorkoutController">
+   <children>
+      <VBox fx:id="left" alignment="TOP_CENTER" styleClass="left">
+         <children>
+            <Button fx:id="cancelBtn" cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <AnchorPane styleClass="center" HBox.hgrow="ALWAYS">
+         <children>
+            <GridPane fx:id="grid" vgap="20.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="100.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints percentHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints percentHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane fx:id="sGrid" hgap="15.0">
+                    <columnConstraints>
+                      <ColumnConstraints percentWidth="50.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints percentHeight="25.0" vgrow="SOMETIMES" />
+                      <RowConstraints percentHeight="25.0" vgrow="SOMETIMES" />
+                      <RowConstraints percentHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints percentHeight="25.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Number of exercises:" GridPane.halignment="RIGHT" />
+                        <Label text="Time for each exercise:" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <Label text="Half-time break:" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                        <Label text="Break after each exercise:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                        <GridPane fx:id="eGrid" hgap="5.0" maxWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="45.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" percentWidth="45.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text=":" GridPane.columnIndex="1" />
+                              <Spinner fx:id="exerciseTimeMin" editable="true" promptText="M" />
+                              <Spinner fx:id="exerciseTimeSec" editable="true" promptText="S" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="bGrid" hgap="5.0" maxWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" percentWidth="45.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" percentWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" percentWidth="45.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text=":" GridPane.columnIndex="1" />
+                              <Spinner fx:id="exerciseBreakMin" editable="true" promptText="M" />
+                              <Spinner fx:id="exerciseBreakSec" editable="true" promptText="S" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                        <GridPane fx:id="htGrid" hgap="5.0" maxWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" percentWidth="45.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" percentWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" percentWidth="45.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text=":" GridPane.columnIndex="1" />
+                              <Spinner fx:id="halftimeMin" editable="true" promptText="M" />
+                              <Spinner fx:id="halftimeSec" editable="true" promptText="S" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Spinner fx:id="exerciseNum" editable="true" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <VBox fx:id="vBox" alignment="CENTER" maxWidth="1.7976931348623157E308" spacing="20.0" styleClass="border" GridPane.rowIndex="1">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" text="Add to library and?" />
+                        <HBox fx:id="hBox" alignment="CENTER" spacing="15.0">
+                           <children>
+                              <Button fx:id="addBtn" mnemonicParsing="false" onAction="#createAdd" text="Return" />
+                              <Button fx:id="startBtn" mnemonicParsing="false" onAction="#createStart" text="Start" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

@@ -1,0 +1,56 @@
+.root {
+    -fx-font-size: 24px;
+}
+
+.left {
+    -fx-background-color: #eeeeee;
+}
+
+.button {
+    /* -fx-font-size: 24px; */
+    -fx-pref-width: 160px;
+}
+
+.view-graph-button {
+    -fx-pref-width: 200px;
+}
+
+.create-button {
+    -fx-pref-width: 300px;
+}
+
+.toggle-button {
+    /* -fx-font-size: 24px; */
+}
+
+.label {
+    /* -fx-font-size: 24px; */
+}
+
+.text-field {
+    /* -fx-font-size: 24px; */
+    -fx-max-width: 250px;
+}
+
+.title {
+    -fx-font-size: 36px;
+}
+
+.image-view-wrapper {
+    -fx-border-color: #000000;
+    -fx-max-width: 640px;
+    -fx-pref-height: 360px;
+}
+
+.progress-bar {
+    -fx-pref-height: 24px;
+}
+
+.sub-progress-bar {
+    -fx-pref-width: 480px;
+}
+
+.super-progress-bar {
+    -fx-pref-width: 720px;
+}
+

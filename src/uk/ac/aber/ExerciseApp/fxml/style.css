@@ -1,0 +1,166 @@
+*{
+    -fx-text-fill: white;
+    -fx-color: white;
+    orange: #ff9100;
+    black: #000000;
+    grey: #121212;
+    lightgrey: #303030;
+    white: #E5E5E5;
+}
+
+.root {
+    -fx-background-color: grey;
+    -fx-base: grey;
+    -fx-background: grey;
+}
+
+.center {
+    -fx-background-color: derive(grey,5%);
+}
+
+.button{
+    -fx-background-color: orange;
+    -fx-border-radius: 10 10 10 10; /*Rounded borders*/
+    -fx-background-radius: 10 10 10 10;
+    -fx-color: white;
+    -fx-background-color: orange;
+}
+
+.choice-box{
+    -fx-border-radius: 10 10 10 10; /*Rounded borders*/
+    -fx-background-radius: 10 10 10 10;
+    -fx-mark-color: white; /*Down Arrow*/
+    -fx-background-color:  orange;
+}
+/*Context menu, choicebox + spinners*/
+.context-menu { -fx-background-color: grey; }
+.menu-item:focused { -fx-background-color: orange; }
+.menu-item > .label { -fx-text-fill: white; }
+.menu-item:focused > .label { -fx-text-fill: black; }
+
+.toggle-button{
+    -fx-background-color: orange;
+    -fx-border-radius: 10 10 10 10; /*Rounded borders*/
+    -fx-background-radius: 10 10 10 10;
+}
+
+.interactive:hover {
+    -fx-background-color: orange;
+}
+
+.interactive{
+    -fx-background-color: grey;
+    -fx-border-radius: 10 10 10 10; /*Rounded borders*/
+    -fx-background-radius: 10 10 10 10;
+}
+
+.border {
+    -fx-border-color: lightgrey;
+    -fx-border-radius: 10 10 10 10; /*Rounded borders*/
+    -fx-background-radius: 10 10 10 10;
+ }
+
+.image-view-wrapper {
+    -fx-border-color: white;
+}
+
+.progress-bar {
+    -fx-progress-color: orange;
+    -fx-accent: orange;
+}
+
+.rightPane {
+   -fx-background-color:  transparent; /*Specific pane in history tab when selecting past session*/
+}
+
+/*Scroll Bar colour*/
+.scroll-pane {-fx-background-color: derive(grey,5%);}
+.scroll-pane > .viewport {-fx-background-color: transparent;}
+.scroll-bar:horizontal, .scroll-bar:vertical{-fx-background-color:transparent;}
+.scroll-pane > .corner {-fx-background-color: transparent;}
+.scroll-bar:horizontal .track,
+
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: orange;
+    -fx-background-radius: 5em;
+}
+
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-background-color: orange;
+}
+
+/*Spinners*/
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.spinner{
+    -fx-background-color: orange;
+    -fx-body-color: orange;
+    -fx-base: orange;
+    -fx-border-color: orange;
+    -fx-border-radius: 10 10 10 10; /*Rounded borders*/
+}
+.spinner > .text-field {
+    -fx-background-color: lightgrey;
+}
+
+.spinner .increment-arrow-button {
+    -fx-background-color: orange;
+    -fx-body-color: orange;
+    -fx-mark-color: white; /*Arrow*/
+}
+
+.spinner .decrement-arrow-button {
+    -fx-background-color: orange;
+    -fx-body-color: orange;
+    -fx-mark-color: white; /*Arrow*/
+}
+
+.spinner .increment-arrow-button:pressed {
+    -fx-background-color: derive(orange,-30%);
+    -fx-body-color: black;
+}
+
+.spinner .decrement-arrow-button:pressed {
+    -fx-background-color: derive(orange,-30%);
+    -fx-body-color: black;
+}
+/*Text areas - as visible in about page*/
+.text-area{
+    -fx-border-color: white;
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-color: transparent;
+}
+.text-area .content {
+    -fx-background-color: transparent;
+}
+/*Line plot on history page*/
+.chart-plot-background {
+    -fx-background-color: lightgrey;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: white;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: white;
+}
+
+.chart-alternative-row-fill {
+    -fx-fill: derive(lightgrey,10%);
+    -fx-stroke: derive(lightgrey,10%);
+    -fx-stroke-width: 0;
+}
+.axis:left {-fx-border-color: transparent white transparent transparent;}
+.axis:bottom{-fx-border-color: white transparent transparent;}
